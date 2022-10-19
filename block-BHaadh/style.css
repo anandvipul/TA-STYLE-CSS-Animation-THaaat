@@ -1,0 +1,53 @@
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(30deg) rotateZ(-30deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(30deg) rotateZ(-30deg);
+  }
+}
+
+.case2 {
+  position: absolute;
+  top: 45vh;
+  left: 45vw;
+  transform-style: preserve-3d;
+  transform-origin: 0%;
+}
+
+.case2:hover {
+  animation: spin 5s linear infinite;
+}
+
+.case2 > div {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border: 1px solid red;
+  text-align: center;
+  line-height: 200px;
+  font-size: 3em;
+  color: greenyellow;
+}
+
+.exp-front {
+  transform: translateZ(100px);
+}
+
+.exp-back {
+  transform: rotateY(-180deg) translateZ(100px);
+}
+
+.exp-top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.exp-right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.exp-left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.exp-bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
